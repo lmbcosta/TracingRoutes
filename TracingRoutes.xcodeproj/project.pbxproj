@@ -12,6 +12,7 @@
 		49075CE11F79849A00E6EFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49075CDF1F79849A00E6EFCF /* Main.storyboard */; };
 		49075CE31F79849A00E6EFCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49075CE21F79849A00E6EFCF /* Assets.xcassets */; };
 		49075CE61F79849A00E6EFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49075CE41F79849A00E6EFCF /* LaunchScreen.storyboard */; };
+		49075CEF1F79B80B00E6EFCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49075CEE1F79B80B00E6EFCF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		49075CE21F79849A00E6EFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49075CE51F79849A00E6EFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49075CE71F79849A00E6EFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49075CEE1F79B80B00E6EFCF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49075CEF1F79B80B00E6EFCF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				49075CDA1F79849A00E6EFCF /* TracingRoutes */,
 				49075CD91F79849A00E6EFCF /* Products */,
+				49075CED1F79B80B00E6EFCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				49075CE71F79849A00E6EFCF /* Info.plist */,
 			);
 			path = TracingRoutes;
+			sourceTree = "<group>";
+		};
+		49075CED1F79B80B00E6EFCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49075CEE1F79B80B00E6EFCF /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +109,14 @@
 					49075CD71F79849A00E6EFCF = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -277,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 423W5F3JD5;
 				INFOPLIST_FILE = TracingRoutes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lmbcosta.TracingRoutes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 423W5F3JD5;
 				INFOPLIST_FILE = TracingRoutes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lmbcosta.TracingRoutes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
